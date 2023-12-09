@@ -1,6 +1,7 @@
 :root {
     --ColorPurple: #5C1665;
     --textColorFooter: #959595;
+    --backgroundSection: #0F0211;
 }
 
 @font-face {
@@ -75,6 +76,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    transition: background-color 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .nav-container .left-button {
@@ -91,6 +93,11 @@ body {
     background-color: var(--ColorPurple);
     border-radius: 25px;
     color: #000000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-container .left-button .hamburger-btn:hover {
+    transform: scale(1.2);
 }
 
 .nav-container .right-buttons {
@@ -103,6 +110,7 @@ body {
     margin-left: 20px;
     padding: 10px 15px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     border: none;
     background-color: transparent;
@@ -110,19 +118,62 @@ body {
 }
 
 .nav-container .right-buttons .register-btn {
+    width: 200px;
     padding: 20px;
     border: 2px solid var(--ColorPurple);
     border-radius: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-container .right-buttons .register-btn:hover {
+    transform: scale(0.9);
 }
 
 .nav-container .right-buttons .login-btn {
-    background-color: var(--ColorPurple);
+    width: 200px;
     padding: 20px;
     border-radius: 30px;
+    background-color: var(--ColorPurple);
+    color: var(--backgroundSection);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-container .right-buttons .login-btn:hover {
+    transform: scale(0.9);
+}
+
+.container-apresentation {
+    margin-top: 120px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-apresentation .apresentation-image {
+    width: 250px;
+    height: 250px;
+}
+
+.container-apresentation .title-apresentation {
+    font-weight: bold;
+    font-size: 35px;
+    color: #FFF;
+}
+
+.container-apresentation .title-apresentation .purple-text {
+    color: var(--ColorPurple);
+}
+
+.container-apresentation .text-apresentation {
+    max-width: 900px;
+    text-align: center; /* Centraliza o texto */
 }
 
 .container-about {
-    margin-top: 120px;
+    margin-bottom: 100px;
     width: 100%;
     max-height: 400px;
 }
@@ -151,10 +202,9 @@ body {
 }
 
 .footer-area {
-    margin-top: 100%;
     width: 100%;
     height: 250px;
-    background-color: #0F0211;
+    background-color: var(--backgroundSection);
     color: var(--textColorFooter);
     display: flex;
     flex-direction: row;
