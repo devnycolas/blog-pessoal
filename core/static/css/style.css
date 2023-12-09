@@ -1,0 +1,198 @@
+:root {
+    --ColorPurple: #5C1665;
+    --textColorFooter: #959595;
+}
+
+@font-face {
+    font-family: textFont;
+    /* src: url(../fonts/Grotesk-Light.ttf); */
+    src: url(../fonts/Comfortaa-Regular.ttf);
+}
+
+@font-face {
+    font-family: titleFont;
+    src: url(../fonts/monasgrotesk-bold.ttf);
+}
+
+/* Para WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px; /* Largura do scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--ColorPurple); /* Cor do thumb (parte deslizante) */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #8a3ab9; /* Cor do thumb ao passar o mouse */
+}
+
+/* Para Internet Explorer */
+*::-ms-scrollbar {
+    width: 8px;
+}
+
+*::-ms-thumb {
+    background-color: var(--ColorPurple);
+}
+
+*::-ms-thumb:hover {
+    background-color: #8a3ab9;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/background_home_02.jpg');
+    font-size: 14px;
+    font-family: textFont;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: subpixel-antialiased;
+    color: #abacae;
+    line-height: 25px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow-x: hidden;
+}
+
+.nav-container {
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-container .left-button {
+    margin-right: auto; /* Empurra os botões para a extremidade direita */
+    margin-left: 10%;
+}
+
+.nav-container .left-button button {
+    margin-left: 25%;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: var(--ColorPurple);
+    border-radius: 25px;
+    color: #000000;
+}
+
+.nav-container .right-buttons {
+    margin-left: auto; /* Empurra os botões para a extremidade direita */
+    margin-right: 15%;
+}
+
+
+.nav-container .right-buttons button {
+    margin-left: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: #FFF;
+}
+
+.nav-container .right-buttons .register-btn {
+    padding: 20px;
+    border: 2px solid var(--ColorPurple);
+    border-radius: 30px;
+}
+
+.nav-container .right-buttons .login-btn {
+    background-color: var(--ColorPurple);
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.container-about {
+    margin-top: 120px;
+    width: 100%;
+    max-height: 400px;
+}
+
+.container-about .title-about {
+    padding-top: 5%;
+    padding-left: 10%;
+    font-weight: bold;
+    font-size: 35px;
+    color: #FFF;
+}
+
+.container-about .profile-image {
+    margin-top: 5%;
+    margin-right: 20%; /* Adiciona um espaçamento à direita da imagem */
+    border-radius: 50%; /* Define a moldura redonda */
+    width: 250px; /* Ajuste a largura conforme necessário */
+    height: 250px; /* Ajuste a altura conforme necessário */
+    object-fit: cover; /* Garante que a imagem cubra completamente a moldura, mantendo as proporções */
+    float: right; /* Faz a imagem flutuar à esquerda do texto */
+}
+
+.container-about .text-about-me {
+    padding-left: 10%;
+    max-width: 500px;
+}
+
+.footer-area {
+    margin-top: 100%;
+    width: 100%;
+    height: 250px;
+    background-color: #0F0211;
+    color: var(--textColorFooter);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: textFont;
+}
+
+.title-footer {
+    margin-bottom: 40px;
+    margin-right: 80px;
+    font-family: titleFont;
+    font-size: 35px;
+    color: var(--ColorPurple);
+}
+
+.copyright {
+    margin-right: 80px;
+}
+
+.contact-info {
+    margin-right: 80px;
+}
+
+.created-by {
+    margin-right: 80px;
+    margin-bottom: 20px;
+}
+
+.social-icons-footer{
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.social-icons-footer a {
+    margin-right: 15px;
+}
+
+.color-strong-footer{
+    color: #FFF;
+}

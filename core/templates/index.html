@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Nycolas: Bem-Vindo</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logo.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="left-button">
+                <button class="hamburger-btn">&#9776;</button>
+            </div>
+            <div class="right-buttons">
+                <button class="register-btn">Cadastre-se</button>
+                <button class="login-btn">Acesse sua conta</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="about-me">
+        <div class="container-about">
+            <img src="{% static 'img/profile.jpeg' %}" alt="Minha Foto" class="profile-image">
+            <h2 class="title-about">Sobre Mim</h2>
+
+            <div class="text-about-me">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            </div>
+            
+            
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-area">
+            <h2 class="title-footer">DEV NYCOLAS</h2>
+
+            <div class="copyright">© 2023 - Todos os direitos <br> reservados. <br> Dev Nycolas</div>
+
+            <div class="contact-info">
+                <strong class="color-strong-footer">Precisa de ajuda?</strong> <br>
+                dev.nycolas@outlook.com <br>
+                Termos de uso <br>
+                Política de privacidade
+            </div>
+
+            <div class="created-by">
+                <strong class="color-strong-footer">Developer | Programação</strong> <br>
+                Criado com ❤ por Nycolas B. Nascimento
+            </div>
+
+            <div class="social-icons-footer">
+                <a href="https://www.linkedin.com/in/nycolas-brito/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/imnycolas_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
