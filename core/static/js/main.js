@@ -34,3 +34,5 @@ document.addEventListener("DOMContentLoaded", function() {
         image.style.opacity = opacity;
     });
 });
+
+ 

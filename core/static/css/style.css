@@ -1,7 +1,16 @@
 :root {
     --ColorPurple: #5C1665;
     --textColorFooter: #959595;
-    --backgroundSection: #0F0211;
+    --colorPallete1: #0F0211;
+    --colorPallete2: #103c5a;
+    --colorPallete3: #796EA8;
+    --colorPallete4: #4d7b93;
+    --colorPallete5: #4B7AE8;
+    --colorPallete6: #C71497;
+    --colorPallete7: #518C9F;
+    --colorPallete8: #3B5B85;
+    --colorPallete9: #4EAA95;
+    --colorPallete10: #976EDF;
 }
 
 @font-face {
@@ -134,7 +143,7 @@ body {
     padding: 20px;
     border-radius: 30px;
     background-color: var(--ColorPurple);
-    color: var(--backgroundSection);
+    color: var(--colorPallete1);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -184,7 +193,7 @@ body {
     padding: 30px 0 30px 0;
     width: 100%;
     max-height: 400px;
-    background-color: var(--backgroundSection);
+    background-color: var(--colorPallete1);
     overflow: hidden;
 }
 
@@ -216,14 +225,13 @@ body {
 
 
 .container-projetos {
-    margin-bottom: 120px;
     width: 100%;
-    height: 1500px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: var(--backgroundSection);
+    background-color: var(--colorPallete1);
     overflow: hidden;
 }
 
@@ -266,12 +274,25 @@ body {
     box-sizing: border-box;
 }
 
+.container-carrossel-projetos {
+    margin-bottom: 120px;
+    width: 100%;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--colorPallete8);
+    overflow: hidden;
+}
+
+
 
 .footer-area {
     position: relative;
     width: 100%;
     height: 250px;
-    background-color: var(--backgroundSection);
+    background-color: var(--colorPallete1);
     color: var(--textColorFooter);
     display: flex;
     flex-direction: row;
