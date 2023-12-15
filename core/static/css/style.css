@@ -52,6 +52,7 @@
 
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -185,6 +186,7 @@ body {
 .container-apresentation .text-apresentation {
     max-width: 900px;
     text-align: center;
+    color: #e5e5e5;
     box-sizing: border-box; 
 }
 
@@ -213,14 +215,19 @@ body {
     height: 250px;
     object-fit: cover;
     float: right;
-    max-width: 100%; /* Garante que a largura máxima seja respeitada */
-    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .container-about .text-about-me {
     padding-left: 10%;
     max-width: 800px;
-    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    color: #e5e5e5;
+    box-sizing: border-box; 
+}
+
+.container-about .about-text-decoration {
+    color: #4EAA95;
 }
 
 
@@ -269,24 +276,93 @@ body {
 
 .container-projetos .text-projetos {
     max-width: 900px;
-    margin-top: 5%;
+    margin-top: 30px;
     text-align: center;
+    color: #e5e5e5;
     box-sizing: border-box;
 }
 
 .container-carrossel-projetos {
     margin-bottom: 120px;
+    padding-top: 30px;
     width: 100%;
-    height: 650px;
+    height: 550px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: var(--colorPallete8);
+	align-items: center;
+    background-color: var(--colorPallete10);
     overflow: hidden;
 }
 
+.card_box {
+    width: 300px;
+    height: 400px;
+    background: #ffffff;
+    border-radius: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    transition: .3s;
+}
 
+.card_box:hover {
+	box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.05);
+	transform: translateY(-10px);
+}
+
+.card_img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    border-radius: 40px 40px 0 0;
+}
+
+.card_text {
+    border-radius: 0 0 40px 40px;
+	padding: 30px 20px 25px 20px;
+}
+
+.card_text h4 {
+	font-size: 20px;
+	font-family: titleFont;
+	color: var(--colorPallete5);
+}
+
+.card_text p {
+	 font-size: 16px;
+     font-family: textFont;
+	 line-height: 150%;
+	 margin-top: 10px;
+	 color: #23273A;
+}
+
+.slider_carousel .owl-nav {
+	 position: absolute;
+	 top: 50%;
+	 width: 100%;
+}
+
+.slider_carousel .owl-prev, .slider_carousel .owl-next {
+	width: 40px;
+	height: 40px;
+	background: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+}
+
+.slider_carousel .owl-next {
+    right: -50px;
+}
+
+.slider_carousel .owl-prev {
+    left: -50px;
+}
+
+.owl-carousel.slider_carousel .owl-item .card_box {
+    margin-right: 50px;
+}
 
 .footer-area {
     position: relative;
@@ -339,6 +415,11 @@ body {
 
 .social-icons-footer a {
     margin-right: 15px;
+    color: var(--colorPallete9);
+}
+
+.social-icons-footer a:hover {
+    color: var(--colorPallete7);
 }
 
 .color-strong-footer{

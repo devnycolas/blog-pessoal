@@ -12,6 +12,13 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+        <!-- Fontawesome Link for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+        <!-- all css here -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/fontawesome.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet" type="text/css" />
 
     </head>
     <body>
@@ -52,7 +59,7 @@
             <div class="container-about">
 
                 <img src="{% static 'img/profile.jpeg' %}" alt="Minha Foto" class="profile-image">
-                <h2 class="title-about">Mais Sobre Mim</h2>
+                <h2 class="title-about"><span class="about-text-decoration">Mais</span> Sobre Mim</h2>
 
                 <div class="text-about-me">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -93,7 +100,56 @@
         <section class="initial-carrossel-projetos">
             <div class="container-carrossel-projetos">
 
-                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="owl-carousel slider_carousel">
+                                <div class="card_box">
+                                    <img class="card_img" src="{% static 'img/image04.jpg' %}" alt="">
+                                    <div class="card_text">
+                                        <h4>Projeto: 1</h4>
+                                        <p>Descrição do projeto</p>
+                                    </div>
+                                </div>
+                                <div class="card_box">
+                                    <img class="card_img" src="{% static 'img/image06.jpg' %}" alt="">
+                                    <div class="card_text">
+                                        <h4>Projeto: 2</h4>
+                                        <p>Descrição do projeto</p>
+                                    </div>
+                                </div>
+                                <div class="card_box">
+                                    <img class="card_img" src="{% static 'img/image07.jpg' %}" alt="">
+                                    <div class="card_text">
+                                        <h4>Projeto: 3</h4>
+                                        <p>Descrição do projeto</p>
+                                    </div>
+                                </div>
+                                <div class="card_box">
+                                    <img class="card_img" src="{% static 'img/image08.jpg' %}" alt="">
+                                    <div class="card_text">
+                                        <h4>Projeto: 4</h4>
+                                        <p>Descrição do projeto</p>
+                                    </div>
+                                </div>
+                                <div class="card_box">
+                                    <img class="card_img" src="{% static 'img/image09.jpg' %}" alt="">
+                                    <div class="card_text">
+                                        <h4>Projeto: 5</h4>
+                                        <p>Descrição do projeto</p>
+                                    </div>
+                                </div>
+                                <div class="card_box">
+                                    <img class="card_img" src="{% static 'img/image03.jpg' %}" alt="">
+                                    <div class="card_text">
+                                        <h4>Projeto: 6</h4>
+                                        <p>Descrição do projeto</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </section>
@@ -128,6 +184,40 @@
         </footer>
 
         <script src="{% static 'js/main.js' %}"></script>
+        <!-- all js here -->
+        <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+        <script>
+            
+            function slider_carouselInit() {
+                $('.owl-carousel.slider_carousel').owlCarousel({
+                    dots: false,
+                    loop: true,
+                    stagePadding: 2,
+                    autoplay: true,
+                    nav: true,
+                    navText: ["<i class='fa-solid fa-chevron-left'></i>","<i class='fa-solid fa-chevron-right'></i>"],
+                    autoplayTimeout: 2500,
+                    autoplayHoverPause: true,
+                    responsive: {
+                        0: {
+                            items: 1,
+                            margin: 10,
+                        },
+                        768: {
+                            items: 2,
+                            margin: 20,
+                        },
+                        992: {
+                            items: 3,
+                        }
+                    }
+                });
+            }
+            slider_carouselInit();
+
+        </script>
 
     </body>
 </html>
