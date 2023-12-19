@@ -63,16 +63,35 @@ document.addEventListener("DOMContentLoaded", function () {
                 var offset = 120;
                 var targetPosition = targetElement.offsetTop - offset;
 
-                // Alteração: Animação suave usando window.scrollTo com um objeto de opções
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'  // Adiciona a animação suave
-                });
+                // Animação suave usando JavaScript
+                scrollToSmooth(targetPosition);
 
                 // Fechar o sidebar após clicar em um link
                 closeSidebar();
             }
         });
     });
+
+    function scrollToSmooth(targetPosition) {
+        var startPosition = window.scrollY || document.documentElement.scrollTop;
+        var distance = targetPosition - startPosition;
+        var startTime;
+        var duration = 800; //Milisegundos
+
+        function animate(currentTime) {
+            if (startTime === undefined) startTime = currentTime;
+            var elapsedTime = currentTime - startTime;
+            var progress = Math.min(elapsedTime / duration, 1);
+            var easeInOutCubic = progress < 0.5 ? 4 * progress ** 3 : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+            window.scrollTo(0, startPosition + distance * easeInOutCubic);
+
+            if (elapsedTime < duration) {
+                requestAnimationFrame(animate);
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }
 
 });

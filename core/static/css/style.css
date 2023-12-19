@@ -152,6 +152,7 @@ body {
     transform: scale(0.9);
 }
 
+
 .sidebar-menu {
     height: 100%;
     width: 0;
@@ -159,7 +160,7 @@ body {
     z-index: 1001;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
     overflow-x: hidden;
@@ -498,5 +499,20 @@ body {
   
     100% {
       transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 }
