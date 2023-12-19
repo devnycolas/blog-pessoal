@@ -11,14 +11,19 @@ window.addEventListener('scroll', function () {
     }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
+
     var image = document.querySelector('.projetos-image');
+    const hamburgerBtn = document.querySelector('.hamburger-btn');
+    const sidebar = document.querySelector('.sidebar-menu');
+    const closeSidebarBtn = document.querySelector('.close-sidebar-btn');
+    var links = document.querySelectorAll('.text-ul-sidebar a');
 
     window.addEventListener('scroll', function() {
         // Altura do contêiner
         var containerHeight = document.querySelector('.container-projetos').offsetHeight;
         
-        // Posição atual do rolo
+        // Posição atual do scroll
         var scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
         // Opacidade máxima
@@ -33,5 +38,41 @@ document.addEventListener("DOMContentLoaded", function() {
         // Aplica a opacidade à imagem
         image.style.opacity = opacity;
     });
-});
 
+    function openSidebar() {
+        sidebar.style.width = '600px';
+        document.documentElement.style.overflow = 'hidden';
+    }
+    
+    function closeSidebar() {
+        sidebar.style.width = '0';
+        document.documentElement.style.overflow = 'auto';
+    }
+    
+    hamburgerBtn.addEventListener('click', openSidebar);
+    closeSidebarBtn.addEventListener('click', closeSidebar);
+
+    links.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            var targetId = this.getAttribute('href').substring(1);
+            var targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                var offset = 120;
+                var targetPosition = targetElement.offsetTop - offset;
+
+                // Alteração: Animação suave usando window.scrollTo com um objeto de opções
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'  // Adiciona a animação suave
+                });
+
+                // Fechar o sidebar após clicar em um link
+                closeSidebar();
+            }
+        });
+    });
+
+});

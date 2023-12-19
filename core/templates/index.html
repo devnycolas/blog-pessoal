@@ -15,6 +15,7 @@
         <!-- Fontawesome Link for Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
+
         <!-- all css here -->
         <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
         <link href="{% static 'css/fontawesome.min.css' %}" rel="stylesheet" type="text/css" />
@@ -35,8 +36,18 @@
             </div>
         </nav>
 
+        <div class="sidebar-menu">
+            <div class="close-sidebar-btn">&times;</div>
+            <h2 class="title-sidebar"><a href="#home-section">DEV NYCOLAS</a></h2>
+            <ul class="text-ul-sidebar">
+                <li><a href="#home-section">Home</a></li>
+                <li><a href="#about-section">Sobre mim</a></li>
+                <li><a href="#projetos-section">Projetos</a></li>
+            </ul>
+        </div>
 
-        <section class="initial-apresentation">
+
+        <section class="initial-apresentation" id="home-section">
             <div class="container-apresentation">
 
                 <img src="{% static 'img/logo.png' %}" alt="Image Apresentation" class="apresentation-image">
@@ -55,7 +66,7 @@
             </div>
         </section>
 
-        <section class="about-me">
+        <section class="about-me" id="about-section">
             <div class="container-about">
 
                 <img src="{% static 'img/profile.jpeg' %}" alt="Minha Foto" class="profile-image">
@@ -97,7 +108,7 @@
             </div>
         </section>
 
-        <section class="initial-carrossel-projetos">
+        <section class="initial-carrossel-projetos" id="projetos-section">
             <div class="container-carrossel-projetos">
 
                 <div class="container">
@@ -183,8 +194,8 @@
             </div>
         </footer>
 
-        <script src="{% static 'js/main.js' %}"></script>
         <!-- all js here -->
+        <script src="{% static 'js/main.js' %}"></script>
         <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
         <script src="{% static 'js/owl.carousel.min.js' %}"></script>
@@ -211,6 +222,7 @@
                         },
                         992: {
                             items: 3,
+                            margin: 30,
                         }
                     }
                 });
